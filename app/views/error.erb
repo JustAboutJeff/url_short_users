@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>LIL' SHORTY</h1>
+  <form action='/urls' method='post'>
+    <input type="text" name='long_url'>
+    <input type="submit">
+  </form>
+
+  <% if @new_url %>
+  <br>
+    <a href="http://localhost:9393/<%= @new_url.short_url %>"><%= @new_url.short_url %></a>
+  <% end %>
+
+  <% if @url_list %>
+    <br>
+    <ul>
+    <% @url_list.reverse.each do |url| %>
+      <li>
+        <a href="http://localhost:9393/<%= url.short_url %>"><%= url.short_url %></a>
+        <span> <%= url.click_count%> </span>
+        <span> <%= url.long_url%> </span>
+      </li>
+    <% end %>
+  <% end %>
+
+</div>

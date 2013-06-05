@@ -1,0 +1,14 @@
+<div id="urls">
+
+  <ul>
+    <% @url_list.reverse.each do |url| %>
+      <li>
+        <a href="http://localhost:9393/<%= url.short_url %>" target="_blank"><%= url.short_url %></a>
+        <span> <%= url.click_count%> </span>
+        <span> <%= url.long_url%> </span>
+      </li>
+    <% end %>
+  </ul>
+  
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>LIL' SHORTY</h1>
+  <form action='/urls' method='post'>
+    <input type="text" name='long_url'>
+    <input type="submit">
+  </form>
+
+  <% if @errors %>
+    <%= erb :_errors, :layout => false %>
+  <% end %>
+  <% if @url_list %>
+    <%= erb :_urls, :layout => false %>
+  <% end %>
+
+</div>
