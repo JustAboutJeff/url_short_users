@@ -1,4 +1,7 @@
 class Url < ActiveRecord::Base
+
+  belongs_to :user
+  
   before_save :get_short_url
   before_save :get_click_count
   validates :long_url, presence: true,

@@ -12,10 +12,12 @@ gem 'thin'
 
 gem 'activesupport'
 gem 'activerecord'
+gem 'faker'
 
 gem 'rake'
 
 gem 'shotgun'
+gem 'bcrypt-ruby'
 
 group :test do
   gem 'faker'

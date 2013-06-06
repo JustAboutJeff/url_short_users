@@ -2,7 +2,7 @@
   <h1>LIL' SHORTY</h1>
   <form action='/urls' method='post'>
     <input type="text" name='long_url'>
-    <input type="submit">
+    <input type="submit" value="SUBMIT">
   </form>
 
   <% if @errors %>
@@ -11,5 +11,21 @@
   <% if @url_list %>
     <%= erb :_urls, :layout => false %>
   <% end %>
+  <br>
+  <br>
+  <br>
 
+  <form action='/signup' method='get'>
+    <input type="submit" value='SIGN UP'>
+  </form>
+
+  <form action='/login' method='get'>
+   <input type="submit" value='LOG IN'>
+  </form>
+
+  <form action='/logout' method='get'>
+    <input type="submit" value='LOG OUT'>
+  </form>
+
+  
 </div>
